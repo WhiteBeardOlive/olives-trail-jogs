@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Trail Runs</title>
+    <link rel="stylesheet" href="trail-title.css" />
+  </head>
+
+  <body>
+    <h1 class="title">Trail Jogs</h1>
+    
+    <div class="trail-container-image">
+      <img src="trail deer.jpg" class="trail-deer-picture" />
+    </div>
+    
+    <div class="logs-and-forms">
+      <!-- left side -->
+      <div class="logs-section">
+        <div class="trail-log-title">
+          <h2>Trail Logs</h2>
+        </div>
+
+        <div class="trail-data">
+          <span>Month</span>
+          <span>Day</span>
+          <span>Year</span>
+          <span>Time</span>
+        </div>
+
+        <!-- this will display the jogging data -->
+        <div class="js-jog-list"></div>
+      </div>
+      <!-- left side ends here -->
+
+      <!-- right side -->
+      <div class="form-section">
+
+        <h2 class="log-jog-title">Add a Log</h2>
+
+        <!--this div will ensure that each 'input forms' will lay next to each other -->
+        <div class="input-form-row">
+
+          <div class="date-parent">
+            <!-- this will display an input box but with dates -->
+            <!-- adding another class 'jog-dates-input' which will be used for stying in css  -->
+            <input type="date" class="js-jog-dates-input jog-dates-input" />
+          </div>
+
+          <!-- this div will be to make sure the error display underneath the corresponding input. the same will be used for seconds -->
+          <div class="minutes-parent">
+          <!-- input attribute value set to number so it only accept numeric input -->
+
+          <!-- Minutes -->
+          <!-- doing with type number allows for only numbers to be input and not text -->
+          <!-- note that 'minutes input' is another class for our css styling -->
+          <input type="number" placeholder="Minutes" class="js-minutes-input minutes-input" />
+
+          <!-- this will be our minutes error message -->
+          <!-- used span so the message can be next to the corresponding input will fix so that the error shows at the bottom of the input box -->
+          <span class="js-error-minutes"></span>
+        </div>
+        
+        <div class="seconds-parent">
+          <!-- Seconds  -->
+          <!-- setting a restriction of min 0 seconds all the way up to max 59 seconds -->
+          <!-- 'second input' is another class for our styling in css -->
+          <input
+            type="number"
+            placeholder="Seconds"
+            min="0"
+            max="59"
+            class="js-seconds-input seconds-input"
+            />
+
+          <!-- this will be our seconds error message -->
+          <span class="js-error-seconds"></span>
+        </div>
+        
+        <div class="button-parent">
+          <button
+          onclick="
+          addJogTime();
+          "
+          class="jog-add-button"
+          >
+          Add
+        </button>
+        </div>
+          </div>
+        <!-- right side ends here -->
+      </div>
+
+    </div>
+
+    <!-- start adding the jogging chart -->
+    <canvas id="jogChart" width="600" height="300"></canvas>
+    <p class="js-no-jog-data"></p>
+
+    <!-- This will give us access to Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="trail-log.js"></script>
+  </body>
+</html>

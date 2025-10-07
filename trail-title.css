@@ -1,0 +1,93 @@
+.title {
+  text-align: center;
+  background-color: aliceblue;
+}
+
+.trail-container-image {
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.trail-deer-picture {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.trail-log-title {
+  display: inline-block;
+  background-color: #4caf50;
+}
+
+.trail-data span {
+  margin-right: 20px;
+}
+
+.trail-data {
+  /* display: inline-block; */ /* makes sure that the data does not stretch to the end of the page */
+  border: 2px solid #4caf50; /* gives the border a visible solid outline with green border */
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* subtle shadow */
+  padding: 5px 10px; /* space inside */
+
+  margin-top: 10px;
+
+  width: fit-content; /* make sure the content fits snug and does not stretch */
+}
+
+.logs-and-forms {
+  display: flex;
+  justify-content: space-between;
+}
+
+.js-jog-list {
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  min-height: 100px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.jog-dates-input,
+.minutes-input,
+.seconds-input,
+.jog-add-button {
+  
+  font-size: 15px;
+  padding: 6px;
+  width: 7rem;
+}
+
+.input-form-row {
+  display: flex;
+  gap: 10px;
+}
+
+
+.js-error-minutes {
+  
+  color: #F08080;
+
+}
+
+/* For Chrome, Safari, Edge, Opera */
+/* This removes the spinners from the inputs */
+.minutes-input::-webkit-inner-spin-button,
+.minutes-input::-webkit-outer-spin-button,
+.seconds-input::-webkit-inner-spin-button,
+.seconds-input::-webkit-outer-spin-button {
+  -webkit-appearance: none; 
+  margin: 0;
+}
+
+.js-error-minutes,
+.js-error-seconds {
+  display: block;
+  color: #f08080;
+  /* Add this line to force-wrap long text */
+  word-break: break-all;
+  /* or for better readability, use word-wrap */
+  overflow-wrap: break-word;
+}
